@@ -1,16 +1,10 @@
-*{
-    font-size: 14px;
-    text-decoration: none;
-    font-family: "微软雅黑";
-    text-align: center;
+#circle{
+    width:200px;
+    height:200px;
+    background-color:blue;
+    border-radius:50%;
 }
 body{
     background-color: red;
     height: 1000px;
-}
-#circle{
-    width：200px；
-    height：200p；
-    background-color：blue；
-    border-radius：50%；
 }
