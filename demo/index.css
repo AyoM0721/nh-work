@@ -4,3 +4,7 @@
     font-family: "微软雅黑";
     text-align: center;
 }
+body{
+    background-color: red;
+    height: 1000px;
+}
