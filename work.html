@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        var div = document.querySelectorAll('div');
+        for(i = 0;i<=5;i++){
+            if (i == 2) {
+                div[2].className = 'blue';
+                div[i].style.width = '50px';
+                div[i].style.height = '50px';
+                div[i].style.display = 'inline-block';
+                div[i].style.marginLeft = '20px';
+            } else {
+                div[i].style.width = '50px';
+                div[i].style.height = '50px';
+                div[i].style.backgroundColor = 'red';
+                div[i].style.display = 'inline-block';
+                div[i].style.marginLeft = '20px';
+            }
+            
+        }
+        // div[2].style.backgroundColor = 'blue';
+        // div[2].className = 'blue';
+    </script>
+</body>
+</html>
