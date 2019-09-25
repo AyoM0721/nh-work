@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 400px;
+				height: 800px;
+				
+			}
+			#box>div{
+				width: 50px;
+				height: 50px;
+				border: 1px solid black;
+				position: absolute;
+				transition: 0.5s;
+				background-image: url(img/timg.jpg);
+				opacity: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box = document.getElementById('box');
+			for(i = 0;i<16;i++){
+				for(z = 0;z < 9;z++){
+					var div = document.createElement('div');
+					box.appendChild(div);
+					div.style.top = i*50+'px';
+					div.style.left = z*50+'px';
+					div.style.backgroundPositionX = z*-50+'px';
+					div.style.backgroundPositionY = i*-50+'px';
+					div.onmousemove = function(){
+						this.style.opacity = 1;
+					}
+					
+				}
+			}
+		</script>
+	</body>
+</html>
