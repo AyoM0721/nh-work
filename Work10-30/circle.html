@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <style>
+        body{
+            background-color: yellow;
+        }
+        #mydiv {
+            width: 140px;
+            height:140px;
+            border-radius: 50%;
+            background-color: yellow;
+            border: 2px solid white;
+            float: left;
+        }
+        #mydiv:hover{
+            cursor: pointer;
+        }
+        li {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: none;
+            list-style: none;
+            border: 2px solid white;
+            margin-left: 5px;
+            margin-top: 25px;
+            float: left;
+        }
+        li:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv"></div>
+    <ul>
+        <li style="background-color: skyblue;"></li>
+        <li style="background-color: lightgreen;"></li>
+        <li style="background-color: pink;"></li>
+        <li style="background-color: black;"></li>
+        <li style="background-color: darkseagreen;"></li>
+        <li style="background-color:slateblue;"></li>
+    </ul>
+    <script>
+        var color=0;
+        $("#mydiv").click(function () {
+            color++;
+            if(color%2==0){
+                $("li").hide("display");
+            }else{
+                $("li").show("display");
+            }
+            $("li").toggleClass('block');
+            $("body").css({ "background": $(this).css("background-color") });
+				 
+            $("li").click(function () {
+                $("body").css({ "background": $(this).css("background-color") });
+            })
+        })
+    </script>
+</body>
+
+</html>
